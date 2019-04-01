@@ -17,7 +17,6 @@ fetchSearchResults(q, (err, results) => {
     console.error(err);
     return;
   }
-  //console.log(results);
   parseSearchResults(results, (err, items) => {
     if (err) {
       console.error(err);
