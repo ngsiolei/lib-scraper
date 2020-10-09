@@ -9,8 +9,8 @@ if (args.length < 3) {
 
 const q = args.slice(2).join(' ');
 
-const {fetchSearchResults, fetchLocal} = require('./fetch.js');
-const {parseSearchResults} = require('./parse.js');
+const { fetchSearchResults, fetchLocal } = require('./fetch.js');
+const { parseSearchResults } = require('./parse.js');
 
 fetchSearchResults(q, (err, results) => {
   if (err) {
@@ -24,7 +24,9 @@ fetchSearchResults(q, (err, results) => {
     }
     console.log('---');
     items.forEach(x => {
-      const link = `https://webpac.library.gov.mo/client/zh_TW/webpac/search/detailnonmodal?d=${encodeURIComponent(x.id +'~~0')}`;
+      const link = `https://webpac.library.gov.mo/client/zh_TW/webpac/search/detailnonmodal?d=${encodeURIComponent(
+        x.id + '~~0'
+      )}`;
       console.log(['*', x.title, '|', link].join(' '));
     });
     console.log('---');

@@ -61,15 +61,6 @@ const parseSearchResults = (data, cb) => {
           case 'content':
             contentDepth = depth;
             break;
-          /*
-          case 'link':
-            if (entryDepth && entryDepth < depth) {
-              if (attrs.href) {
-                pendingItem.link = attrs.href;
-              }
-            }
-            break;
-*/
         }
       },
       ontext: text => {
@@ -107,7 +98,7 @@ const parseSearchResults = (data, cb) => {
         cb(null, items);
       },
     },
-    {decodeEntities: false},
+    { decodeEntities: false }
   );
   parser.write(data);
   parser.end();
