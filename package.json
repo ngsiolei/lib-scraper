@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "htmlparser2": "^5.0.0"
+    "htmlparser2": "^6.1.0"
   },
   "devDependencies": {},
   "description": ""
