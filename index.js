@@ -1,13 +1,13 @@
 'use strict';
 
 const t1 = Date.now();
-const args = process.argv;
-if (args.length < 3) {
+const { argv } = require('node:process');
+if (argv.length < 3) {
   console.log('Usage: node index QUERY');
   process.exit(1);
 }
 
-const q = args.slice(2).join(' ');
+const q = argv.slice(2).join(' ');
 
 const { fetchSearchResults, fetchLocal } = require('./fetch.js');
 const { parseSearchResults } = require('./parse.js');

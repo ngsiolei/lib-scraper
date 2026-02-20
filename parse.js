@@ -1,7 +1,7 @@
 'use strict';
 
 const htmlparser = require('htmlparser2');
-const qs = require('querystring');
+const qs = require('node:querystring');
 const trans = require('./trans.js');
 
 const decodeContent = content => {
